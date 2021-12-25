@@ -45,9 +45,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.108"
+version = "0.2.109"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8521a1b57e76b1ec69af7599e75e38e7b7fad6610f037db8c79b127201b5d119"
+checksum = "f98a04dce437184842841303488f70d0188c5f51437d2a834dc097eafa909a01"
 
 [[package]]
 name = "machine_learning"
@@ -130,9 +130,9 @@ dependencies = [
 
 [[package]]
 name = "swarm_pool"
-version = "0.1.9"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0bf32f492609d9c42ff777631a3f3907568cc84f0f0707f802ff29397e86a6dd"
+checksum = "a0ba8e6a26afacd40d8ac4c0b0ecdc04f528550f4dbfb8f120b365ef7a46e57c"
 
 [[package]]
 name = "version-compare"

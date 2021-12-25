@@ -7,7 +7,7 @@ edition = "2021"
 
 [dependencies]
 rand = "*"
-swarm_pool = "0.1.9"
+swarm_pool = "0.2.0"
 
 [dependencies.sdl2]
 version = "0.34.5"

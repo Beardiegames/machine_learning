@@ -9,6 +9,7 @@ use sdl2::keyboard::Keycode;
 use sdl2::pixels;
 use swarm::Swarm;
 use swarm::control::SwarmControl;
+use crate::timer::UpdateTimer;
 
 
 pub trait Drawable {
@@ -17,7 +18,7 @@ pub trait Drawable {
 
 pub struct Renderer<P> {
     gfx: Gfx,
-    props: P,
+    pub props: P,
 }
 
 pub struct Gfx {
@@ -56,6 +57,8 @@ pub fn run<T: Drawable + Default + Clone, P>(
     swarm: &mut Swarm<T, Renderer<P>>, 
     update: fn(&mut SwarmControl<T, Renderer<P>>)
 ) {
+    let mut timer = UpdateTimer::new(120);
+
     'main: loop {
         for event in swarm.properties.gfx.events.poll_iter() {
             match event {
@@ -79,6 +82,7 @@ pub fn run<T: Drawable + Default + Clone, P>(
         );
 
         swarm.properties.gfx.canvas.present();
-        thread::sleep(Duration::from_millis(10));
+
+        timer.sync();
     }
 }
