@@ -61,7 +61,7 @@ impl Modifiers {
 //  - rewards are compared first, if equal compare ages.
 
 #[derive(Clone)]
-struct Pilot {
+pub struct Pilot {
     input_count: usize,
     active_setup: Modifiers,
     prev_setup: Modifiers,
