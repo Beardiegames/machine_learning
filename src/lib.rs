@@ -94,11 +94,12 @@ impl Pilot {
     }
 
     pub fn punish(&mut self) {
-        if self.strikes < 2 { self.strikes += 1; }
-        else {
-            self.strikes = 0;
-            self.evolve();
-        }
+        // if self.strikes < 2 { self.strikes += 1; }
+        // else {
+        //     self.strikes = 0;
+        //     self.evolve();
+        // }
+        self.evolve();
     }
 
     fn evolve(&mut self) {
