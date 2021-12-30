@@ -13,6 +13,7 @@ pub type WriteIndex = usize;
 pub(crate) struct Chain {
     pub opp_list: [Opperation; cfg::CHAIN],
     pub age: u64,
+    pub rewards: u8,
 }
 
 impl Chain {
@@ -20,7 +21,7 @@ impl Chain {
         let mut opp_list = [Opperation::default(); cfg::CHAIN as usize];
         for i in 0..cfg::CHAIN { opp_list[i] = Opperation::from_rng(i, &mut rng); }
 
-        Chain { opp_list, age: 0 }
+        Chain { opp_list, age: 0, rewards: 0 }
     }
 
     pub fn execute(&mut self, data_buffer: &mut DataBuffer) {
